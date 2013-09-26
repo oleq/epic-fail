@@ -9,8 +9,8 @@ var fileServer = new nodeStatic.Server( './static' );
 var server = require( 'http' ).createServer( function( request, response ) {
 	request.addListener( 'end', function() {
 		fileServer.serve( request, response );
-	});
-})
+	} ).resume();
+} ).listen( 8080 );
 
 server.listen( 8080 );
 console.log( '[EPIC] Static server running at :8080.' );
@@ -22,5 +22,6 @@ io.set( 'log level', 1 );
 
 io.sockets.on( 'connection', function( socket ) {
 	epicFail.add( socket );
-});
+} );
+
 console.log( '[EPIC] Sockets server running at :8080.' );
