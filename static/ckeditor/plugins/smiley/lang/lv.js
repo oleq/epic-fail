@@ -1,1 +1,0 @@
-﻿CKEDITOR.plugins.setLang("smiley","lv",{options:"Smiley Options",title:"Ievietot smaidiņu",toolbar:"Smaidiņi"});
